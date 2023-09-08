@@ -5,6 +5,7 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SmissTestContainer extends TestContainer {
 
@@ -24,6 +25,13 @@ public class SmissTestContainer extends TestContainer {
                 // or add another one in the end.
                 "com/company/smiss/test-app.properties");
         autoConfigureDataSource();
+
+        dbDriver = "org.postgresql.Driver";
+        dbUrl = "jdbc:postgresql://localhost/smiss";
+        dbUser = "cuba";
+        dbPassword = "cuba123";
+
+
     }
 
     

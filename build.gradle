@@ -88,6 +88,13 @@ configure(coreModule) {
     }
 
     dependencies {
+
+//        implementation('tech.tablesaw:tablesaw-aggregate:0.36.0') {
+//            exclude group: 'org.apache.poi'
+//            exclude module: 'poi-ooxml'
+//        }
+        compile 'org.apache.poi:poi-ooxml:5.2.3'
+
         compile(globalModule)
         compileOnly(servletApi)
         jdbc(postgres)
